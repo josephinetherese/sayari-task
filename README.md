@@ -1,7 +1,7 @@
 # Sayari Programming Task
 
 `python3 xspider.py` scrapes data on active businesses starting with X and saves
-them to `XSpider_data.json`
+them to `xspider_data.json`
 
 `python3 xspiderhandler.py` reads `xspider_data.json` and draws a graph of the
 relationships between entities in it (Business Names, Registered Agents,
