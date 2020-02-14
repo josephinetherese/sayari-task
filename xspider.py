@@ -9,7 +9,7 @@ class XSpider(scrapy.Spider):
     name = 'x_collector'
 
     def __init__(self):
-        super().__init__()
+        super()
         self.results = {}
         self.body = {
             'SEARCH_VALUE': 'X',
@@ -63,12 +63,12 @@ class XSpider(scrapy.Spider):
         '''
         with open('xspider_data.json', 'w', encoding='utf-8') as f:
             json.dump(spider.results, f, ensure_ascii=False)
-        super.close(spider, reason)
+        super().close(spider, reason)
 
 
 if __name__ == '__main__':
     process = CrawlerProcess(settings={
-        'CLOSESPIDER_ITEMCOUNT': 195,
+        'CLOSESPIDER_PAGECOUNT': 195,
         'DOWNLOAD_DELAY': 1
     })
     process.crawl(XSpider)
